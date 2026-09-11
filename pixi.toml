@@ -1,6 +1,7 @@
 [workspace]
 channels = ["knime/label/nightly", "knime", "conda-forge"]
-platforms = ["win-64", "linux-64", "osx-arm64"]
+# knime-extension-bundling packs all four KNIME platforms and fails on a lockfile that lacks one.
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 
 [tasks]
 test = { cmd = "pytest" }
