@@ -14,6 +14,10 @@ ruff = "*"
 knime-extension = "5.13.*"
 knime-python-base = "5.13.*"
 knime-python-versions = "5.13.*"
+# cryptography (pulled in via google-auth) has no macOS x86_64 wheel on PyPI any more, so the PyPI
+# resolver falls back to its sdist on osx-64, which knime-extension-bundling cannot pack.
+# Taking it from conda-forge satisfies the PyPI dependency with a binary build on every platform.
+cryptography = "*"
 
 [pypi-dependencies]
 google-api-python-client = "==2.198.0"
