@@ -3,8 +3,8 @@ channels:
   - knime
   - conda-forge
 dependencies:
-  - knime-extension=5.5.*
-  - knime-python-base=5.5.*
+  - knime-extension
+  - knime-python-base
   - python=3.11
   - cryptography
   - pip:
